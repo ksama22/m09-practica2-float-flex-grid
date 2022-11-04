@@ -1,0 +1,133 @@
+/* Menu fijo top  */
+header {
+    background-color: #000000;
+    padding: 10px;
+    height: 60px;
+    /*fixed: el siguiente elemento quedaria oculto */
+    position: sticky;
+    top: 0;
+    width: 100%;
+    font-size: 1.4rem;
+    /* Per algun motiu ho oculta sola el banner*/
+    z-index: 1;
+}
+
+nav {
+    padding-left: 20px;
+}
+
+.header-list {
+    list-style-type: none;
+}
+
+.header-list>li {
+    float: right;
+    margin: 0px 20px;
+}
+
+.header-list a {
+    text-decoration: none;
+    color: white;
+}
+
+.header-list a:hover {
+    text-decoration: underline;
+}
+
+/* Menu imagen con texto */
+#banner {
+    position: relative;
+}
+
+#banner>img {
+    width: 100%;
+
+}
+
+#text-banner-image {
+    font-size: 1.6rem;
+    position: absolute;
+    left: 30px;
+    top: 10%;
+    color: white;
+}
+
+/* Elementos despues de banner encuadrados*/
+#container {
+    margin: 0 auto;
+    max-width: 750px;
+}
+
+h1{
+    background-color: #12203E;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+.card-left {
+    float: right;
+}
+
+.carta-grid {
+    /* Espacio entre cartas*/
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+}
+
+.menu-grid {
+    grid-area: 1 / 1 / 3 / 2;
+    border: 3px solid #BFCFD9;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    max-height: 300px;
+    line-height: 300px;
+    text-align: center;
+
+}
+
+.menu-grid>h2 {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+}
+
+.text-grid {
+    grid-area: 1 / 2 / 2 / 4;
+    text-align: justify;
+}
+
+.image-grid-1, img{
+    grid-area: 2 / 2 / 3 / 3;
+    width: 95%;
+}
+
+.image-grid-2, img {
+    grid-area: 2 / 3 / 3 / 4;
+    width: 95%;
+}
+
+.flex-images {
+    display: flex;
+    justify-content: center; /* align horizontal */
+    align-items: center; /* align vertical */
+}
+
+.flex-image {
+    margin: 10px;
+}
+
+.flex-image:first-child {
+    filter: brightness(50%);
+}
+
+.flex-image:last-child {
+    filter: brightness(50%);
+}
+
+footer {
+    background-color: #000000;
+    padding: 10px;
+}
