@@ -65,9 +65,24 @@ h1 {
     text-align: center;
 }
 
-.card-left {
-    float: right;
+.card>img{
+    width: 200px;
 }
+/*
+.card-img-left {
+    width: 200px;
+    float: left;
+}
+
+.card-img-right {
+    width: 200px;
+    float: left;
+}
+.card-right {
+    clear: left;
+
+}*/
+
 
 .carta-grid {
     margin-top: 20px;
@@ -95,6 +110,12 @@ h1 {
 
 }
 
+/* Imatges dins del grid carta*/
+.img-grid>img {
+    width: 95%;
+}
+
+/* Titol 'menu 1, menu 2' del grid carta*/
 .menu-grid>h2 {
     display: inline-block;
     vertical-align: middle;
@@ -107,44 +128,68 @@ h1 {
     text-align: justify;
 }
 
-.image-grid-1, img {
+.image-grid-1 {
     /* Es conectara amb  el (grid-template-areas) pare*/
     grid-area: image1;
-    width: 95%;
 }
 
-.image-grid-2,
-img {
+.image-grid-2 {
     /* Es conectara amb  el (grid-template-areas) pare*/
     grid-area: image2;
-    width: 95%;
 }
 
 .flex-images {
     display: flex;
     justify-content: center;
-    /* align horizontal */
     align-items: center;
-    /* align vertical */
+    flex-wrap: wrap;
 }
 
 .flex-image {
     margin: 10px;
+    /* img galeria imatges */
+    max-width: 150px;
 }
 
+/* Aplica oscuritat a les imatges de galeria segons fill*/
 .flex-image:first-child {
     filter: brightness(50%);
 }
 
-.flex:nth-child(4) {
-    color
+.flex-image:nth-child(4) {
+    filter: brightness(50%);
+}
+
+.flex-image:nth-child(5) {
+    filter: brightness(50%);
 }
 
 .flex-image:last-child {
     filter: brightness(50%);
 }
 
+
 footer {
     background-color: #000000;
-    padding: 10px;
+    padding: 20px;
+    /* Tots el seus fills tenen lletra blanca*/
+    color: white;
+}
+
+.icon-footer {
+    width: 20px;
+}
+
+.phone-footer {
+    width: 200px;
+    float: left;
+}
+
+.contact-footer {
+    width: 200px;
+    float: left;
+}
+
+.info-footer {
+    float: right;
 }
