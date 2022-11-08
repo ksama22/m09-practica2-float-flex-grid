@@ -58,26 +58,33 @@ nav {
     max-width: 750px;
 }
 
-h1{
+h1 {
     background-color: #12203E;
     color: white;
     padding: 10px;
     text-align: center;
 }
+
 .card-left {
     float: right;
 }
 
 .carta-grid {
-    /* Espacio entre cartas*/
     margin-top: 20px;
     display: grid;
+    /* Defineix el tamanys de colum i rows */
     grid-template-columns: auto auto auto;
     grid-template-rows: auto auto;
+    /* Conecta el (grid-area) dels seus fills*/
+    /* literalment els ordena tal com o escrius */
+    grid-template-areas: "menu1 text1 text1"
+        "menu1 image1 image2";
+
 }
 
 .menu-grid {
-    grid-area: 1 / 1 / 3 / 2;
+    /* Es conectara amb  el (grid-template-areas) pare*/
+    grid-area: menu1;
     border: 3px solid #BFCFD9;
     border-radius: 10px;
     padding: 10px;
@@ -95,24 +102,30 @@ h1{
 }
 
 .text-grid {
-    grid-area: 1 / 2 / 2 / 4;
+    /* Es conectara amb  el (grid-template-areas) pare*/
+    grid-area: text1;
     text-align: justify;
 }
 
-.image-grid-1, img{
-    grid-area: 2 / 2 / 3 / 3;
+.image-grid-1, img {
+    /* Es conectara amb  el (grid-template-areas) pare*/
+    grid-area: image1;
     width: 95%;
 }
 
-.image-grid-2, img {
-    grid-area: 2 / 3 / 3 / 4;
+.image-grid-2,
+img {
+    /* Es conectara amb  el (grid-template-areas) pare*/
+    grid-area: image2;
     width: 95%;
 }
 
 .flex-images {
     display: flex;
-    justify-content: center; /* align horizontal */
-    align-items: center; /* align vertical */
+    justify-content: center;
+    /* align horizontal */
+    align-items: center;
+    /* align vertical */
 }
 
 .flex-image {
@@ -121,6 +134,10 @@ h1{
 
 .flex-image:first-child {
     filter: brightness(50%);
+}
+
+.flex:nth-child(4) {
+    color
 }
 
 .flex-image:last-child {
