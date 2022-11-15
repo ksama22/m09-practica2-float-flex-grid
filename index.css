@@ -55,34 +55,20 @@ nav {
 /* Elementos despues de banner encuadrados*/
 #container {
     margin: 0 auto;
-    max-width: 750px;
+    max-width: 800px;
 }
 
-h1 {
+
+h2 {
     background-color: #12203E;
     color: white;
     padding: 10px;
     text-align: center;
 }
 
-.card>img{
-    width: 200px;
+.card-text {
+    text-align: justify;
 }
-/*
-.card-img-left {
-    width: 200px;
-    float: left;
-}
-
-.card-img-right {
-    width: 200px;
-    float: left;
-}
-.card-right {
-    clear: left;
-
-}*/
-
 
 .carta-grid {
     margin-top: 20px;
@@ -113,10 +99,13 @@ h1 {
 /* Imatges dins del grid carta*/
 .img-grid>img {
     width: 95%;
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid #BFCFD9;
 }
 
 /* Titol 'menu 1, menu 2' del grid carta*/
-.menu-grid>h2 {
+.menu-grid>h3 {
     display: inline-block;
     vertical-align: middle;
     line-height: normal;
@@ -146,26 +135,41 @@ h1 {
 }
 
 .flex-image {
-    margin: 10px;
+    margin: 3px;
+    border-radius: 5px;
+    border: 1px solid #BFCFD9;
+    padding: 5px;
     /* img galeria imatges */
     max-width: 150px;
 }
 
 /* Aplica oscuritat a les imatges de galeria segons fill*/
-.flex-image:first-child {
-    filter: brightness(50%);
-}
-
-.flex-image:nth-child(4) {
-    filter: brightness(50%);
-}
-
+.flex-image:first-child,
+.flex-image:last-child,
+.flex-image:nth-child(4),
 .flex-image:nth-child(5) {
     filter: brightness(50%);
 }
 
-.flex-image:last-child {
-    filter: brightness(50%);
+/* Espai entre cartes i carta 'titol carta' */
+.card {
+    margin-bottom: 50px;
+}
+
+.card-left>img {
+    border-radius: 10px;
+    float: left;
+    /* espai dret ente imatge carta*/
+    margin-right: 10px;
+    max-width: 220px;
+}
+
+.card-right>img {
+    border-radius: 10px;
+    float: right;
+    /* espai esquerra ente imatge carta*/
+    margin-left: 10px;
+    max-width: 220px;
 }
 
 
@@ -192,4 +196,17 @@ footer {
 
 .info-footer {
     float: right;
+}
+
+/* Tots tindran ombra on 'hover'*/
+.flex-image:hover {
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.409);
+}
+
+/*Com tots els elements tidran el mateix estil, els crido tots */
+.flex-image:last-child:hover,
+.flex-image:first-child:hover,
+.flex-image:nth-child(4):hover,
+.flex-image:nth-child(5):hover {
+    filter: brightness(100%);
 }
