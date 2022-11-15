@@ -43,8 +43,45 @@
 }
 
 @media (max-width: 576px) {
-    body {
-        background-color: green;
-        ;
+    /* El contigut ha de ser menor */
+    #container {
+        max-width: 500px;
     }
+    /* Centrem els titols*/
+    h1 {
+        text-align: center;
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 100px;
+    }
+
+    /* El subtitol 'carta' no existeix*/
+    h2 {
+        display: none;
+    }
+
+    /* La carta es reordena en verical*/
+    .carta-grid {
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas: "menu1" "text1" "image1" "image2";
+    }
+    /* la separacio no existex, posa a 0*/
+    .menu-grid{
+        line-height: 0px;
+        padding: 0px;
+    }
+
+    /* Tamany de la galeria adient a tota la pagina verticalment*/
+    .flex-image {
+        max-width: 400px;
+    }
+
+    /* El footer es reordena en verical*/
+   /* .contact-footer,.phone-footer,.info-footer { 
+     float: none;
+     margin: 0 auto;
+    margin-bottom: 10px;
+    max-width: 200px;
+    }*/
 }
