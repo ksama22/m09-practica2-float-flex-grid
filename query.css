@@ -1,11 +1,50 @@
-/*@media (max-width: 768px) {   
-body{
-    background-color: blue;;
-}
+@media (max-width: 768px) {
+    /* El contigut ha de ser menor */
+    #container{
+        max-width: 680px;
+    }
+    /* Header en blanc */
+    header {
+        background-color: white;
+    }
+    /* lletra en negre */
+    .header-list a {
+        color: black;
+    }
+
+    /* treu espai i cap a la detra */
+    .header-list>li {
+        float: left;
+    }
+
+    nav {
+        padding-left: 0px;
+    }
+
+    .card-left>img,
+    .card-right>img {
+        float: none;
+        max-width: 100%;
+        margin-left: 0px;
+    }
+
+    /* Cambia l'ordre elements carta */
+    .carta-grid {
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: "menu1 text1 "
+                             "menu1 image1"
+                            "menu1 image2";
+    }
+    .flex-image {
+        max-width: 250px;
+
+    }
 }
 
-@media (max-width: 576px) {   
-    body{
-        background-color: green;;
+@media (max-width: 576px) {
+    body {
+        background-color: green;
+        ;
     }
-}*/
+}
