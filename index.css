@@ -55,29 +55,37 @@ nav {
 /* Elementos despues de banner encuadrados*/
 #container {
     margin: 0 auto;
-    max-width: 750px;
+    max-width: 800px;
 }
 
-h1{
+
+h2 {
     background-color: #12203E;
     color: white;
     padding: 10px;
     text-align: center;
 }
-.card-left {
-    float: right;
+
+.card-text {
+    text-align: justify;
 }
 
 .carta-grid {
-    /* Espacio entre cartas*/
     margin-top: 20px;
     display: grid;
+    /* Defineix el tamanys de colum i rows */
     grid-template-columns: auto auto auto;
     grid-template-rows: auto auto;
+    /* Conecta el (grid-area) dels seus fills*/
+    /* literalment els ordena tal com o escrius */
+    grid-template-areas: "menu1 text1 text1"
+        "menu1 image1 image2";
+
 }
 
 .menu-grid {
-    grid-area: 1 / 1 / 3 / 2;
+    /* Es conectara amb  el (grid-template-areas) pare*/
+    grid-area: menu1;
     border: 3px solid #BFCFD9;
     border-radius: 10px;
     padding: 10px;
@@ -88,46 +96,117 @@ h1{
 
 }
 
-.menu-grid>h2 {
+/* Imatges dins del grid carta*/
+.img-grid>img {
+    width: 95%;
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid #BFCFD9;
+}
+
+/* Titol 'menu 1, menu 2' del grid carta*/
+.menu-grid>h3 {
     display: inline-block;
     vertical-align: middle;
     line-height: normal;
 }
 
 .text-grid {
-    grid-area: 1 / 2 / 2 / 4;
+    /* Es conectara amb  el (grid-template-areas) pare*/
+    grid-area: text1;
     text-align: justify;
 }
 
-.image-grid-1, img{
-    grid-area: 2 / 2 / 3 / 3;
-    width: 95%;
+.image-grid-1 {
+    /* Es conectara amb  el (grid-template-areas) pare*/
+    grid-area: image1;
 }
 
-.image-grid-2, img {
-    grid-area: 2 / 3 / 3 / 4;
-    width: 95%;
+.image-grid-2 {
+    /* Es conectara amb  el (grid-template-areas) pare*/
+    grid-area: image2;
 }
 
 .flex-images {
     display: flex;
-    justify-content: center; /* align horizontal */
-    align-items: center; /* align vertical */
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .flex-image {
-    margin: 10px;
+    margin: 3px;
+    border-radius: 5px;
+    border: 1px solid #BFCFD9;
+    padding: 5px;
+    /* img galeria imatges */
+    max-width: 150px;
 }
 
-.flex-image:first-child {
+/* Aplica oscuritat a les imatges de galeria segons fill*/
+.flex-image:first-child,
+.flex-image:last-child,
+.flex-image:nth-child(4),
+.flex-image:nth-child(5) {
     filter: brightness(50%);
 }
 
-.flex-image:last-child {
-    filter: brightness(50%);
+/* Espai entre cartes i carta 'titol carta' */
+.card {
+    margin-bottom: 50px;
 }
+
+.card-left>img {
+    border-radius: 10px;
+    float: left;
+    /* espai dret ente imatge carta*/
+    margin-right: 10px;
+    max-width: 220px;
+}
+
+.card-right>img {
+    border-radius: 10px;
+    float: right;
+    /* espai esquerra ente imatge carta*/
+    margin-left: 10px;
+    max-width: 220px;
+}
+
 
 footer {
     background-color: #000000;
-    padding: 10px;
+    padding: 20px;
+    /* Tots el seus fills tenen lletra blanca*/
+    color: white;
+}
+
+.icon-footer {
+    width: 20px;
+}
+
+.phone-footer {
+    width: 200px;
+    float: left;
+}
+
+.contact-footer {
+    width: 200px;
+    float: left;
+}
+
+.info-footer {
+    float: right;
+}
+
+/* Tots tindran ombra on 'hover'*/
+.flex-image:hover {
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.409);
+}
+
+/*Com tots els elements tidran el mateix estil, els crido tots */
+.flex-image:last-child:hover,
+.flex-image:first-child:hover,
+.flex-image:nth-child(4):hover,
+.flex-image:nth-child(5):hover {
+    filter: brightness(100%);
 }
