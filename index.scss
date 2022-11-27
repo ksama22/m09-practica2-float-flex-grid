@@ -1,0 +1,33 @@
+//Importa un estil d'un altre .scss
+@import "footer";
+$familia:"verdana";
+$fontSize:"verdana";
+$color: blue;
+$colorHover: white;
+
+body{
+    background: $color;
+    font-family: $familia;
+    font-size: $fontSize;
+    //Anida un sestil amb un altre
+    &:hover{
+        color: $colorHover;
+    }
+}
+
+//Crea una funcio amb un conjunt de normes
+@mixin new-font {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+}
+
+#container{
+    //Importa com si fos una funcio 
+    @include new-font;
+    color: white;
+}
+
+.card{
+    //Importa totes les etiquetes css d'un altrecom si fos 'herencia'
+    @extend body;
+}
