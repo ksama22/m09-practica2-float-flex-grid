@@ -50,7 +50,15 @@ nav {
     left: 30px;
     top: 10%;
     color: white;
+    animation: abracadabra 10s;
+
 }
+
+@keyframes abracadabra {
+    0%   {opacity: 0;}
+    50%  {opacity: 0.5;}
+    100% {opacity: 1;}
+  }
 
 /* Elementos despues de banner encuadrados*/
 #container {
@@ -156,7 +164,7 @@ h2 {
     margin-bottom: 50px;
 }
 
-.card-left>img {
+.card-left>picture>img {
     border-radius: 10px;
     float: left;
     /* espai dret ente imatge carta*/
@@ -164,7 +172,7 @@ h2 {
     max-width: 220px;
 }
 
-.card-right>img {
+.card-right>picture>img {
     border-radius: 10px;
     float: right;
     /* espai esquerra ente imatge carta*/
